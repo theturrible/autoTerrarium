@@ -155,7 +155,7 @@ class Adafruit_I2C(object):
 
 if __name__ == '__main__':
   try:
-    bus = Adafruit_I2C(address=0)
+    bus = Adafruit_I2C(address=1)
     print "Default I2C bus is accessible"
   except:
     print "Error accessing default I2C bus"
