@@ -14,20 +14,17 @@ var htu21df = new i2c_htu21d();
 router.get('/', function(req, res, next) {
 	
 	console.log("getting")
-  	var locals = {};
+  	var locals = [];
   	htu21df.readTemperature(function (temp) {
 		console.log('Temperature, C:', temp);
-            locals.env = {
-                temperature: temp
-            };
-            htu21df.readHumidity(function (humidity){
-    			console.log('humidity', humidity);
-                locals.env = {
-                    humidity: humidity
-                };
-                console.dir(locals)
-	            res.render('index', { title: 'Hey', message: 'Hello there!', temp: locals.env.temperature, humid: locals.env.humidity});
-			});
+        locals.push(temp);
+        console.dir(locals);
+        htu21df.readHumidity(function (humidity){
+			console.log('humidity', humidity);
+			locals.push(humidity);
+            console.dir(locals)
+            res.render('index', { title: 'Hey', message: 'Hello there!', temp: locals[0], humid: locals[1]});
+		});
     });
    
 });
