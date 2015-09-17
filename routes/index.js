@@ -25,7 +25,7 @@ router.get('/', function(req, res, next) {
             });
         },
         function(callback) {
-          htu21df.readHumidity(function (humidity)
+          htu21df.readHumidity(function (humidity){
     			console.log('humidity', humidity);
                 locals.env = {
                     humidity: humidity
