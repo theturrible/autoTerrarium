@@ -37,7 +37,7 @@ router.get('/', function(req, res, next) {
     ], function(err) { //This function gets called after the two tasks have called their "task callbacks"
         if (err) return next(err); //If an error occured, we let express/connect handle it by calling the "next" function
         //Here locals will be populated with 'user' and 'posts'
-        res.render('index', { title: 'Hey', message: 'Hello there!', temp: locals.env.temperature, humid: locals.env.humidity})cd .;
+        res.render('index', { title: 'Hey', message: 'Hello there!', temp: locals.env.temperature, humid: locals.env.humidity});
     });
 
 	
