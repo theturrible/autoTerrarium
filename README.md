@@ -1,18 +1,23 @@
-Simple API that reports the reading from the htu21d sensor connected over i2c. 
+# Simple API that reports the reading from the htu21d sensor connected over i2c. 
 
 Gets: 
 
-/api/h
+* /api/h
+```
 {
     "humidity": "49.3"
 }
-
-/api/t
+```
+* /api/t
+```
 {
     "temperature": "23.8"
 }
-/api/conditions
+```
+* /api/conditions
+```
 {
     "humidity": "49.0",
     "temperature": "23.8"
 }
+```
