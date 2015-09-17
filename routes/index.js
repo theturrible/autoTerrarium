@@ -25,7 +25,8 @@ router.get('/', function(req, res, next) {
                 locals.env = {
                     humidity: humidity
                 };
-	                res.render('index', { title: 'Hey', message: 'Hello there!', temp: locals.env.temperature, humid: locals.env.humidity});
+                console.dir(locals)
+	            res.render('index', { title: 'Hey', message: 'Hello there!', temp: locals.env.temperature, humid: locals.env.humidity});
 			});
     });
    
