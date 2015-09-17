@@ -49,7 +49,7 @@ router.get('/t', function(req, res) {
       });
 });
 router.get('/conditions', function(req, res) {
-  var locals [];
+  var locals = [];
       sensor.readTemperature(function (temp) {
         locals.push(temp);
         sensor.readHumidity(function (humidity){
