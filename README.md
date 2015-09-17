@@ -1,4 +1,4 @@
-# Simple API that reports the reading from the htu21d sensor connected over i2c. 
+# API that reports the reading from the htu21d sensor
 
 Gets: 
 
@@ -21,3 +21,11 @@ Gets:
     "temperature": "23.8"
 }
 ```
+
+### Dependencies
+
+* express
+* htu21d-i2c
+
+
+#### Note: Does not build on 4.0.0 due to i2c lib support
