@@ -1,0 +1,807 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'htu21d-i2c' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of C:\dev\autoTerrarium\package.json
+5 verbose installManyTop reading scoped package data from C:\dev\autoTerrarium\node_modules\body-parser\package.json
+6 verbose installManyTop reading scoped package data from C:\dev\autoTerrarium\node_modules\cookie-parser\package.json
+7 verbose installManyTop reading scoped package data from C:\dev\autoTerrarium\node_modules\debug\package.json
+8 verbose installManyTop reading scoped package data from C:\dev\autoTerrarium\node_modules\express\package.json
+9 verbose installManyTop reading scoped package data from C:\dev\autoTerrarium\node_modules\jade\package.json
+10 verbose installManyTop reading scoped package data from C:\dev\autoTerrarium\node_modules\morgan\package.json
+11 verbose installManyTop reading scoped package data from C:\dev\autoTerrarium\node_modules\node-gyp\package.json
+12 verbose installManyTop reading scoped package data from C:\dev\autoTerrarium\node_modules\serve-favicon\package.json
+13 verbose readDependencies loading dependencies from C:\dev\autoTerrarium\package.json
+14 silly cache add args [ 'htu21d-i2c', null ]
+15 verbose cache add spec htu21d-i2c
+16 silly cache add parsed spec { raw: 'htu21d-i2c',
+16 silly cache add   scope: null,
+16 silly cache add   name: 'htu21d-i2c',
+16 silly cache add   rawSpec: '',
+16 silly cache add   spec: '*',
+16 silly cache add   type: 'range' }
+17 silly addNamed htu21d-i2c@*
+18 verbose addNamed "*" is a valid semver range for htu21d-i2c
+19 silly addNameRange { name: 'htu21d-i2c', range: '*', hasData: false }
+20 silly mapToRegistry name htu21d-i2c
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/htu21d-i2c
+24 verbose addNameRange registry:https://registry.npmjs.org/htu21d-i2c not in flight; fetching
+25 verbose request uri https://registry.npmjs.org/htu21d-i2c
+26 verbose request no auth needed
+27 info attempt registry request try #1 at 6:44:15 PM
+28 verbose request id b8b4100fb108e30b
+29 verbose etag "9HTHYPE41MOQDSZULNPB05KDB"
+30 http request GET https://registry.npmjs.org/htu21d-i2c
+31 http 304 https://registry.npmjs.org/htu21d-i2c
+32 silly get cb [ 304,
+32 silly get   { date: 'Thu, 17 Sep 2015 01:44:11 GMT',
+32 silly get     via: '1.1 varnish',
+32 silly get     'cache-control': 'max-age=60',
+32 silly get     etag: '"9HTHYPE41MOQDSZULNPB05KDB"',
+32 silly get     age: '0',
+32 silly get     connection: 'keep-alive',
+32 silly get     'x-served-by': 'cache-sjc3121-SJC',
+32 silly get     'x-cache': 'MISS',
+32 silly get     'x-cache-hits': '0',
+32 silly get     'x-timer': 'S1442454251.059021,VS0,VE353',
+32 silly get     vary: 'Accept' } ]
+33 verbose etag https://registry.npmjs.org/htu21d-i2c from cache
+34 verbose get saving htu21d-i2c to C:\Users\grinv\AppData\Roaming\npm-cache\registry.npmjs.org\htu21d-i2c\.cache.json
+35 silly addNameRange number 2 { name: 'htu21d-i2c', range: '*', hasData: true }
+36 silly addNameRange versions [ 'htu21d-i2c', [ '0.0.1', '0.0.2', '0.0.3', '0.1.0' ] ]
+37 silly addNamed htu21d-i2c@0.1.0
+38 verbose addNamed "0.1.0" is a plain semver version for htu21d-i2c
+39 silly cache afterAdd htu21d-i2c@0.1.0
+40 verbose afterAdd C:\Users\grinv\AppData\Roaming\npm-cache\htu21d-i2c\0.1.0\package\package.json not in flight; writing
+41 verbose afterAdd C:\Users\grinv\AppData\Roaming\npm-cache\htu21d-i2c\0.1.0\package\package.json written
+42 silly install resolved [ { name: 'htu21d-i2c',
+42 silly install resolved     version: '0.1.0',
+42 silly install resolved     description: 'Read temperature and humidity from the HTU21D-F sensor',
+42 silly install resolved     main: 'index.js',
+42 silly install resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+42 silly install resolved     keywords: [ 'sensor', 'raspberry', 'pi', 'htu21d', 'i2c' ],
+42 silly install resolved     author:
+42 silly install resolved      { name: 'bbx10node',
+42 silly install resolved        email: 'bbx10node@gmail.com',
+42 silly install resolved        url: 'http://x10linux.blogspot.com/' },
+42 silly install resolved     repository:
+42 silly install resolved      { type: 'git',
+42 silly install resolved        url: 'git+ssh://git@github.com/bbx10/node-htu21d.git' },
+42 silly install resolved     license: 'MIT',
+42 silly install resolved     homepage: 'http://github.com/bbx10/node-htu21d.git',
+42 silly install resolved     dependencies: { i2c: '>=0.1.7' },
+42 silly install resolved     gitHead: '135e81b53ab5e98282cb16ea9d27ce193dc9bf0a',
+42 silly install resolved     bugs: { url: 'https://github.com/bbx10/node-htu21d/issues' },
+42 silly install resolved     _id: 'htu21d-i2c@0.1.0',
+42 silly install resolved     _shasum: 'd09d0c47ae031fbc4ce86422a3b617d11ed39059',
+42 silly install resolved     _from: 'htu21d-i2c@*',
+42 silly install resolved     _npmVersion: '1.4.19',
+42 silly install resolved     _npmUser: { name: 'bbx10node', email: 'bbx10node@gmail.com' },
+42 silly install resolved     maintainers: [ [Object] ],
+42 silly install resolved     dist:
+42 silly install resolved      { shasum: 'd09d0c47ae031fbc4ce86422a3b617d11ed39059',
+42 silly install resolved        tarball: 'http://registry.npmjs.org/htu21d-i2c/-/htu21d-i2c-0.1.0.tgz' },
+42 silly install resolved     directories: {},
+42 silly install resolved     _resolved: 'https://registry.npmjs.org/htu21d-i2c/-/htu21d-i2c-0.1.0.tgz',
+42 silly install resolved     readme: 'ERROR: No README data found!' } ]
+43 info install htu21d-i2c@0.1.0 into C:\dev\autoTerrarium
+44 info installOne htu21d-i2c@0.1.0
+45 verbose installOne of htu21d-i2c to C:\dev\autoTerrarium not in flight; installing
+46 verbose lock using C:\Users\grinv\AppData\Roaming\npm-cache\_locks\htu21d-i2c-f83c7a6c8781d687.lock for C:\dev\autoTerrarium\node_modules\htu21d-i2c
+47 silly install write writing htu21d-i2c 0.1.0 to C:\dev\autoTerrarium\node_modules\htu21d-i2c
+48 verbose unbuild node_modules\htu21d-i2c
+49 silly gentlyRm C:\dev\autoTerrarium\node_modules\htu21d-i2c is being purged from base C:\dev\autoTerrarium
+50 verbose gentlyRm don't care about contents; nuking C:\dev\autoTerrarium\node_modules\htu21d-i2c
+51 verbose tar unpack C:\Users\grinv\AppData\Roaming\npm-cache\htu21d-i2c\0.1.0\package.tgz
+52 verbose tar unpacking to C:\dev\autoTerrarium\node_modules\htu21d-i2c
+53 silly gentlyRm C:\dev\autoTerrarium\node_modules\htu21d-i2c is being purged
+54 verbose gentlyRm don't care about contents; nuking C:\dev\autoTerrarium\node_modules\htu21d-i2c
+55 silly gunzTarPerm modes [ '777', '666' ]
+56 silly gunzTarPerm extractEntry package.json
+57 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+58 silly gunzTarPerm extractEntry .npmignore
+59 silly gunzTarPerm modified mode [ '.npmignore', 436, 438 ]
+60 silly gunzTarPerm extractEntry README.md
+61 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+62 silly gunzTarPerm extractEntry LICENSE
+63 silly gunzTarPerm modified mode [ 'LICENSE', 436, 438 ]
+64 silly gunzTarPerm extractEntry htudemo.js
+65 silly gunzTarPerm modified mode [ 'htudemo.js', 420, 438 ]
+66 silly gunzTarPerm extractEntry htutest.js
+67 silly gunzTarPerm modified mode [ 'htutest.js', 420, 438 ]
+68 silly gunzTarPerm extractEntry index.js
+69 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+70 verbose write writing to C:\dev\autoTerrarium\node_modules\htu21d-i2c\package.json
+71 info preinstall htu21d-i2c@0.1.0
+72 verbose readDependencies loading dependencies from C:\dev\autoTerrarium\node_modules\htu21d-i2c\package.json
+73 silly prepareForInstallMany adding i2c@>=0.1.7 from htu21d-i2c dependencies
+74 verbose readDependencies loading dependencies from C:\dev\autoTerrarium\node_modules\htu21d-i2c\package.json
+75 silly cache add args [ 'i2c@>=0.1.7', null ]
+76 verbose cache add spec i2c@>=0.1.7
+77 silly cache add parsed spec { raw: 'i2c@>=0.1.7',
+77 silly cache add   scope: null,
+77 silly cache add   name: 'i2c',
+77 silly cache add   rawSpec: '>=0.1.7',
+77 silly cache add   spec: '>=0.1.7',
+77 silly cache add   type: 'range' }
+78 silly addNamed i2c@>=0.1.7
+79 verbose addNamed ">=0.1.7" is a valid semver range for i2c
+80 silly addNameRange { name: 'i2c', range: '>=0.1.7', hasData: false }
+81 silly mapToRegistry name i2c
+82 silly mapToRegistry using default registry
+83 silly mapToRegistry registry https://registry.npmjs.org/
+84 silly mapToRegistry uri https://registry.npmjs.org/i2c
+85 verbose addNameRange registry:https://registry.npmjs.org/i2c not in flight; fetching
+86 verbose request uri https://registry.npmjs.org/i2c
+87 verbose request no auth needed
+88 info attempt registry request try #1 at 6:44:16 PM
+89 verbose etag "CLY0TF6FO9F6QU25LT9BZURXR"
+90 http request GET https://registry.npmjs.org/i2c
+91 http 304 https://registry.npmjs.org/i2c
+92 silly get cb [ 304,
+92 silly get   { date: 'Thu, 17 Sep 2015 01:44:11 GMT',
+92 silly get     via: '1.1 varnish',
+92 silly get     'cache-control': 'max-age=60',
+92 silly get     etag: '"CLY0TF6FO9F6QU25LT9BZURXR"',
+92 silly get     age: '0',
+92 silly get     connection: 'keep-alive',
+92 silly get     'x-served-by': 'cache-sjc3134-SJC',
+92 silly get     'x-cache': 'HIT',
+92 silly get     'x-cache-hits': '1',
+92 silly get     'x-timer': 'S1442454251.641492,VS0,VE85',
+92 silly get     vary: 'Accept' } ]
+93 verbose etag https://registry.npmjs.org/i2c from cache
+94 verbose get saving i2c to C:\Users\grinv\AppData\Roaming\npm-cache\registry.npmjs.org\i2c\.cache.json
+95 silly addNameRange number 2 { name: 'i2c', range: '>=0.1.7', hasData: true }
+96 silly addNameRange versions [ 'i2c',
+96 silly addNameRange   [ '0.0.1',
+96 silly addNameRange     '0.0.2',
+96 silly addNameRange     '0.0.3',
+96 silly addNameRange     '0.0.4',
+96 silly addNameRange     '0.0.5',
+96 silly addNameRange     '0.1.0',
+96 silly addNameRange     '0.1.1',
+96 silly addNameRange     '0.1.2',
+96 silly addNameRange     '0.1.3',
+96 silly addNameRange     '0.1.4',
+96 silly addNameRange     '0.1.5',
+96 silly addNameRange     '0.1.6',
+96 silly addNameRange     '0.1.7',
+96 silly addNameRange     '0.1.8',
+96 silly addNameRange     '0.2.0',
+96 silly addNameRange     '0.2.1' ] ]
+97 silly addNamed i2c@0.2.1
+98 verbose addNamed "0.2.1" is a plain semver version for i2c
+99 silly cache afterAdd i2c@0.2.1
+100 verbose afterAdd C:\Users\grinv\AppData\Roaming\npm-cache\i2c\0.2.1\package\package.json not in flight; writing
+101 verbose afterAdd C:\Users\grinv\AppData\Roaming\npm-cache\i2c\0.2.1\package\package.json written
+102 silly install resolved [ { name: 'i2c',
+102 silly install resolved     version: '0.2.1',
+102 silly install resolved     description: 'Native bindings for i2c-dev. Plays well with Raspberry Pi and BeagleBone.',
+102 silly install resolved     main: 'main.js',
+102 silly install resolved     author: { name: 'Kelly Korevec' },
+102 silly install resolved     repository:
+102 silly install resolved      { type: 'git',
+102 silly install resolved        url: 'git+ssh://git@github.com/korevec/node-i2c.git' },
+102 silly install resolved     license: 'BSD',
+102 silly install resolved     dependencies:
+102 silly install resolved      { bindings: '1.2.1',
+102 silly install resolved        underscore: '1.8.2',
+102 silly install resolved        'coffee-script': '1.9.1',
+102 silly install resolved        repl: '0.1.3' },
+102 silly install resolved     engine: 'node >= 0.12.0',
+102 silly install resolved     scripts: { install: 'node-gyp rebuild' },
+102 silly install resolved     gypfile: true,
+102 silly install resolved     bugs: { url: 'https://github.com/korevec/node-i2c/issues' },
+102 silly install resolved     homepage: 'https://github.com/korevec/node-i2c',
+102 silly install resolved     _id: 'i2c@0.2.1',
+102 silly install resolved     dist:
+102 silly install resolved      { shasum: 'e5687031c60acf09aa7ea9d35221a9e9161e0abc',
+102 silly install resolved        tarball: 'http://registry.npmjs.org/i2c/-/i2c-0.2.1.tgz' },
+102 silly install resolved     _from: 'i2c@>=0.1.7',
+102 silly install resolved     _npmVersion: '1.3.14',
+102 silly install resolved     _npmUser: { name: 'kelly', email: 'korevec@gmail.com' },
+102 silly install resolved     maintainers: [ [Object] ],
+102 silly install resolved     directories: {},
+102 silly install resolved     _shasum: 'e5687031c60acf09aa7ea9d35221a9e9161e0abc',
+102 silly install resolved     _resolved: 'https://registry.npmjs.org/i2c/-/i2c-0.2.1.tgz',
+102 silly install resolved     readme: 'ERROR: No README data found!' } ]
+103 info install i2c@0.2.1 into C:\dev\autoTerrarium\node_modules\htu21d-i2c
+104 info installOne i2c@0.2.1
+105 verbose installOne of i2c to C:\dev\autoTerrarium\node_modules\htu21d-i2c not in flight; installing
+106 verbose lock using C:\Users\grinv\AppData\Roaming\npm-cache\_locks\i2c-6b1d7fcc9487e666.lock for C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c
+107 silly install write writing i2c 0.2.1 to C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c
+108 verbose unbuild node_modules\htu21d-i2c\node_modules\i2c
+109 silly gentlyRm C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c is being purged from base C:\dev\autoTerrarium
+110 verbose gentlyRm don't care about contents; nuking C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c
+111 verbose tar unpack C:\Users\grinv\AppData\Roaming\npm-cache\i2c\0.2.1\package.tgz
+112 verbose tar unpacking to C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c
+113 silly gentlyRm C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c is being purged
+114 verbose gentlyRm don't care about contents; nuking C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c
+115 silly gunzTarPerm modes [ '777', '666' ]
+116 silly gunzTarPerm extractEntry package.json
+117 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+118 silly gunzTarPerm extractEntry .npmignore
+119 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+120 silly gunzTarPerm extractEntry README.md
+121 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+122 silly gunzTarPerm extractEntry LICENSE
+123 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+124 silly gunzTarPerm extractEntry main.js
+125 silly gunzTarPerm modified mode [ 'main.js', 420, 438 ]
+126 silly gunzTarPerm extractEntry binding.gyp
+127 silly gunzTarPerm modified mode [ 'binding.gyp', 420, 438 ]
+128 silly gunzTarPerm extractEntry examples/accelerometer/accel.coffee
+129 silly gunzTarPerm modified mode [ 'examples/accelerometer/accel.coffee', 420, 438 ]
+130 silly gunzTarPerm extractEntry examples/blinkm/blinkm.coffee
+131 silly gunzTarPerm modified mode [ 'examples/blinkm/blinkm.coffee', 420, 438 ]
+132 silly gunzTarPerm extractEntry lib/i2c.coffee
+133 silly gunzTarPerm modified mode [ 'lib/i2c.coffee', 420, 438 ]
+134 silly gunzTarPerm extractEntry src/i2c-dev.c
+135 silly gunzTarPerm modified mode [ 'src/i2c-dev.c', 420, 438 ]
+136 silly gunzTarPerm extractEntry src/i2c-dev.h
+137 silly gunzTarPerm modified mode [ 'src/i2c-dev.h', 420, 438 ]
+138 silly gunzTarPerm extractEntry src/i2c.cc
+139 silly gunzTarPerm modified mode [ 'src/i2c.cc', 420, 438 ]
+140 verbose write writing to C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\package.json
+141 info preinstall i2c@0.2.1
+142 verbose readDependencies loading dependencies from C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\package.json
+143 silly prepareForInstallMany adding bindings@1.2.1 from i2c dependencies
+144 silly prepareForInstallMany adding underscore@1.8.2 from i2c dependencies
+145 silly prepareForInstallMany adding coffee-script@1.9.1 from i2c dependencies
+146 silly prepareForInstallMany adding repl@0.1.3 from i2c dependencies
+147 verbose readDependencies loading dependencies from C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\package.json
+148 silly cache add args [ 'bindings@1.2.1', null ]
+149 verbose cache add spec bindings@1.2.1
+150 silly cache add args [ 'underscore@1.8.2', null ]
+151 verbose cache add spec underscore@1.8.2
+152 silly cache add parsed spec { raw: 'bindings@1.2.1',
+152 silly cache add   scope: null,
+152 silly cache add   name: 'bindings',
+152 silly cache add   rawSpec: '1.2.1',
+152 silly cache add   spec: '1.2.1',
+152 silly cache add   type: 'version' }
+153 silly addNamed bindings@1.2.1
+154 verbose addNamed "1.2.1" is a plain semver version for bindings
+155 silly mapToRegistry name bindings
+156 silly mapToRegistry using default registry
+157 silly mapToRegistry registry https://registry.npmjs.org/
+158 silly mapToRegistry uri https://registry.npmjs.org/bindings
+159 verbose addNameVersion registry:https://registry.npmjs.org/bindings not in flight; fetching
+160 silly cache add parsed spec { raw: 'underscore@1.8.2',
+160 silly cache add   scope: null,
+160 silly cache add   name: 'underscore',
+160 silly cache add   rawSpec: '1.8.2',
+160 silly cache add   spec: '1.8.2',
+160 silly cache add   type: 'version' }
+161 silly addNamed underscore@1.8.2
+162 verbose addNamed "1.8.2" is a plain semver version for underscore
+163 silly mapToRegistry name underscore
+164 silly mapToRegistry using default registry
+165 silly mapToRegistry registry https://registry.npmjs.org/
+166 silly mapToRegistry uri https://registry.npmjs.org/underscore
+167 verbose addNameVersion registry:https://registry.npmjs.org/underscore not in flight; fetching
+168 silly cache add args [ 'coffee-script@1.9.1', null ]
+169 verbose cache add spec coffee-script@1.9.1
+170 silly cache add parsed spec { raw: 'coffee-script@1.9.1',
+170 silly cache add   scope: null,
+170 silly cache add   name: 'coffee-script',
+170 silly cache add   rawSpec: '1.9.1',
+170 silly cache add   spec: '1.9.1',
+170 silly cache add   type: 'version' }
+171 silly addNamed coffee-script@1.9.1
+172 verbose addNamed "1.9.1" is a plain semver version for coffee-script
+173 silly mapToRegistry name coffee-script
+174 silly mapToRegistry using default registry
+175 silly mapToRegistry registry https://registry.npmjs.org/
+176 silly mapToRegistry uri https://registry.npmjs.org/coffee-script
+177 verbose addNameVersion registry:https://registry.npmjs.org/coffee-script not in flight; fetching
+178 silly cache add args [ 'repl@0.1.3', null ]
+179 verbose cache add spec repl@0.1.3
+180 silly cache add parsed spec { raw: 'repl@0.1.3',
+180 silly cache add   scope: null,
+180 silly cache add   name: 'repl',
+180 silly cache add   rawSpec: '0.1.3',
+180 silly cache add   spec: '0.1.3',
+180 silly cache add   type: 'version' }
+181 silly addNamed repl@0.1.3
+182 verbose addNamed "0.1.3" is a plain semver version for repl
+183 silly mapToRegistry name repl
+184 silly mapToRegistry using default registry
+185 silly mapToRegistry registry https://registry.npmjs.org/
+186 silly mapToRegistry uri https://registry.npmjs.org/repl
+187 verbose addNameVersion registry:https://registry.npmjs.org/repl not in flight; fetching
+188 verbose request uri https://registry.npmjs.org/bindings
+189 verbose request no auth needed
+190 info attempt registry request try #1 at 6:44:16 PM
+191 verbose etag "D2XXGHY5EXANSKX6Q9FJABZ7W"
+192 http request GET https://registry.npmjs.org/bindings
+193 verbose request uri https://registry.npmjs.org/underscore
+194 verbose request no auth needed
+195 info attempt registry request try #1 at 6:44:16 PM
+196 verbose etag "E8MIQNJSWV0199Z79RX4XO9B"
+197 http request GET https://registry.npmjs.org/underscore
+198 verbose request uri https://registry.npmjs.org/repl
+199 verbose request no auth needed
+200 info attempt registry request try #1 at 6:44:16 PM
+201 verbose etag "B2YIZ9SHIPM70CR4ZZI8WJ13O"
+202 http request GET https://registry.npmjs.org/repl
+203 verbose request uri https://registry.npmjs.org/coffee-script
+204 verbose request no auth needed
+205 info attempt registry request try #1 at 6:44:16 PM
+206 verbose etag "51QE2SRG1308OKWQZKY2BCZT6"
+207 http request GET https://registry.npmjs.org/coffee-script
+208 http 304 https://registry.npmjs.org/bindings
+209 silly get cb [ 304,
+209 silly get   { date: 'Thu, 17 Sep 2015 01:44:11 GMT',
+209 silly get     via: '1.1 varnish',
+209 silly get     'cache-control': 'max-age=60',
+209 silly get     etag: '"D2XXGHY5EXANSKX6Q9FJABZ7W"',
+209 silly get     age: '1',
+209 silly get     connection: 'keep-alive',
+209 silly get     'x-served-by': 'cache-sjc3133-SJC',
+209 silly get     'x-cache': 'HIT',
+209 silly get     'x-cache-hits': '1',
+209 silly get     'x-timer': 'S1442454251.950326,VS0,VE0',
+209 silly get     vary: 'Accept' } ]
+210 verbose etag https://registry.npmjs.org/bindings from cache
+211 verbose get saving bindings to C:\Users\grinv\AppData\Roaming\npm-cache\registry.npmjs.org\bindings\.cache.json
+212 silly cache afterAdd bindings@1.2.1
+213 verbose afterAdd C:\Users\grinv\AppData\Roaming\npm-cache\bindings\1.2.1\package\package.json not in flight; writing
+214 http 304 https://registry.npmjs.org/underscore
+215 silly get cb [ 304,
+215 silly get   { date: 'Thu, 17 Sep 2015 01:44:11 GMT',
+215 silly get     via: '1.1 varnish',
+215 silly get     'cache-control': 'max-age=60',
+215 silly get     etag: '"E8MIQNJSWV0199Z79RX4XO9B"',
+215 silly get     age: '57',
+215 silly get     connection: 'keep-alive',
+215 silly get     'x-served-by': 'cache-sjc3121-SJC',
+215 silly get     'x-cache': 'HIT',
+215 silly get     'x-cache-hits': '40',
+215 silly get     'x-timer': 'S1442454251.955634,VS0,VE0',
+215 silly get     vary: 'Accept' } ]
+216 verbose etag https://registry.npmjs.org/underscore from cache
+217 verbose get saving underscore to C:\Users\grinv\AppData\Roaming\npm-cache\registry.npmjs.org\underscore\.cache.json
+218 verbose afterAdd C:\Users\grinv\AppData\Roaming\npm-cache\bindings\1.2.1\package\package.json written
+219 silly cache afterAdd underscore@1.8.2
+220 verbose afterAdd C:\Users\grinv\AppData\Roaming\npm-cache\underscore\1.8.2\package\package.json not in flight; writing
+221 verbose afterAdd C:\Users\grinv\AppData\Roaming\npm-cache\underscore\1.8.2\package\package.json written
+222 http 304 https://registry.npmjs.org/coffee-script
+223 silly get cb [ 304,
+223 silly get   { date: 'Thu, 17 Sep 2015 01:44:11 GMT',
+223 silly get     via: '1.1 varnish',
+223 silly get     'cache-control': 'max-age=60',
+223 silly get     etag: '"51QE2SRG1308OKWQZKY2BCZT6"',
+223 silly get     age: '46',
+223 silly get     connection: 'keep-alive',
+223 silly get     'x-served-by': 'cache-sjc3124-SJC',
+223 silly get     'x-cache': 'HIT',
+223 silly get     'x-cache-hits': '2',
+223 silly get     'x-timer': 'S1442454251.975183,VS0,VE0',
+223 silly get     vary: 'Accept' } ]
+224 verbose etag https://registry.npmjs.org/coffee-script from cache
+225 verbose get saving coffee-script to C:\Users\grinv\AppData\Roaming\npm-cache\registry.npmjs.org\coffee-script\.cache.json
+226 silly cache afterAdd coffee-script@1.9.1
+227 verbose afterAdd C:\Users\grinv\AppData\Roaming\npm-cache\coffee-script\1.9.1\package\package.json not in flight; writing
+228 verbose afterAdd C:\Users\grinv\AppData\Roaming\npm-cache\coffee-script\1.9.1\package\package.json written
+229 http 304 https://registry.npmjs.org/repl
+230 silly get cb [ 304,
+230 silly get   { date: 'Thu, 17 Sep 2015 01:44:11 GMT',
+230 silly get     via: '1.1 varnish',
+230 silly get     'cache-control': 'max-age=60',
+230 silly get     etag: '"B2YIZ9SHIPM70CR4ZZI8WJ13O"',
+230 silly get     age: '0',
+230 silly get     connection: 'keep-alive',
+230 silly get     'x-served-by': 'cache-sjc3129-SJC',
+230 silly get     'x-cache': 'HIT',
+230 silly get     'x-cache-hits': '1',
+230 silly get     'x-timer': 'S1442454251.954868,VS0,VE86',
+230 silly get     vary: 'Accept' } ]
+231 verbose etag https://registry.npmjs.org/repl from cache
+232 verbose get saving repl to C:\Users\grinv\AppData\Roaming\npm-cache\registry.npmjs.org\repl\.cache.json
+233 silly cache afterAdd repl@0.1.3
+234 verbose afterAdd C:\Users\grinv\AppData\Roaming\npm-cache\repl\0.1.3\package\package.json not in flight; writing
+235 verbose afterAdd C:\Users\grinv\AppData\Roaming\npm-cache\repl\0.1.3\package\package.json written
+236 silly install resolved [ { name: 'bindings',
+236 silly install resolved     description: 'Helper module for loading your native module\'s .node file',
+236 silly install resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp', 'waf', 'c', 'c++' ],
+236 silly install resolved     version: '1.2.1',
+236 silly install resolved     author:
+236 silly install resolved      { name: 'Nathan Rajlich',
+236 silly install resolved        email: 'nathan@tootallnate.net',
+236 silly install resolved        url: 'http://tootallnate.net' },
+236 silly install resolved     repository:
+236 silly install resolved      { type: 'git',
+236 silly install resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
+236 silly install resolved     main: './bindings.js',
+236 silly install resolved     bugs: { url: 'https://github.com/TooTallNate/node-bindings/issues' },
+236 silly install resolved     homepage: 'https://github.com/TooTallNate/node-bindings',
+236 silly install resolved     license: 'MIT',
+236 silly install resolved     gitHead: 'e404152ee27f8478ccbc7122ee051246e8e5ec02',
+236 silly install resolved     _id: 'bindings@1.2.1',
+236 silly install resolved     scripts: {},
+236 silly install resolved     _shasum: '14ad6113812d2d37d72e67b4cacb4bb726505f11',
+236 silly install resolved     _from: 'bindings@1.2.1',
+236 silly install resolved     _npmVersion: '1.4.14',
+236 silly install resolved     _npmUser: { name: 'tootallnate', email: 'nathan@tootallnate.net' },
+236 silly install resolved     maintainers: [ [Object], [Object] ],
+236 silly install resolved     dist:
+236 silly install resolved      { shasum: '14ad6113812d2d37d72e67b4cacb4bb726505f11',
+236 silly install resolved        tarball: 'http://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz' },
+236 silly install resolved     directories: {},
+236 silly install resolved     _resolved: 'https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz',
+236 silly install resolved     readme: 'ERROR: No README data found!' },
+236 silly install resolved   { name: 'underscore',
+236 silly install resolved     description: 'JavaScript\'s functional programming helper library.',
+236 silly install resolved     homepage: 'http://underscorejs.org',
+236 silly install resolved     keywords: [ 'util', 'functional', 'server', 'client', 'browser' ],
+236 silly install resolved     author: { name: 'Jeremy Ashkenas', email: 'jeremy@documentcloud.org' },
+236 silly install resolved     repository:
+236 silly install resolved      { type: 'git',
+236 silly install resolved        url: 'git://github.com/jashkenas/underscore.git' },
+236 silly install resolved     main: 'underscore.js',
+236 silly install resolved     version: '1.8.2',
+236 silly install resolved     devDependencies:
+236 silly install resolved      { docco: '*',
+236 silly install resolved        eslint: '0.6.x',
+236 silly install resolved        karma: '~0.12.31',
+236 silly install resolved        'karma-qunit': '~0.1.4',
+236 silly install resolved        'qunit-cli': '~0.2.0',
+236 silly install resolved        'uglify-js': '2.4.x' },
+236 silly install resolved     scripts:
+236 silly install resolved      { test: 'npm run test-node && npm run lint',
+236 silly install resolved        lint: 'eslint underscore.js test/*.js',
+236 silly install resolved        'test-node': 'qunit-cli test/*.js',
+236 silly install resolved        'test-browser': 'npm i karma-phantomjs-launcher && ./node_modules/karma/bin/karma start',
+236 silly install resolved        build: 'uglifyjs underscore.js -c "evaluate=false" --comments "/    .*/" -m --source-map underscore-min.map -o underscore-min.js',
+236 silly install resolved        doc: 'docco underscore.js' },
+236 silly install resolved     license: 'MIT',
+236 silly install resolved     files:
+236 silly install resolved      [ 'underscore.js',
+236 silly install resolved        'underscore-min.js',
+236 silly install resolved        'underscore-min.map',
+236 silly install resolved        'LICENSE' ],
+236 silly install resolved     gitHead: '19db749b190a7cb5a8b7ab1aab42c0e9dc517250',
+236 silly install resolved     bugs: { url: 'https://github.com/jashkenas/underscore/issues' },
+236 silly install resolved     _id: 'underscore@1.8.2',
+236 silly install resolved     _shasum: '64df2eb590899de950782f3735190ba42ebf311d',
+236 silly install resolved     _from: 'underscore@1.8.2',
+236 silly install resolved     _npmVersion: '1.4.28',
+236 silly install resolved     _npmUser: { name: 'jashkenas', email: 'jashkenas@gmail.com' },
+236 silly install resolved     maintainers: [ [Object] ],
+236 silly install resolved     dist:
+236 silly install resolved      { shasum: '64df2eb590899de950782f3735190ba42ebf311d',
+236 silly install resolved        tarball: 'http://registry.npmjs.org/underscore/-/underscore-1.8.2.tgz' },
+236 silly install resolved     directories: {},
+236 silly install resolved     _resolved: 'https://registry.npmjs.org/underscore/-/underscore-1.8.2.tgz',
+236 silly install resolved     readme: 'ERROR: No README data found!' },
+236 silly install resolved   { name: 'coffee-script',
+236 silly install resolved     description: 'Unfancy JavaScript',
+236 silly install resolved     keywords: [ 'javascript', 'language', 'coffeescript', 'compiler' ],
+236 silly install resolved     author: { name: 'Jeremy Ashkenas' },
+236 silly install resolved     version: '1.9.1',
+236 silly install resolved     license: 'MIT',
+236 silly install resolved     engines: { node: '>=0.8.0' },
+236 silly install resolved     directories: { lib: './lib/coffee-script' },
+236 silly install resolved     main: './lib/coffee-script/coffee-script',
+236 silly install resolved     bin: { coffee: './bin/coffee', cake: './bin/cake' },
+236 silly install resolved     preferGlobal: true,
+236 silly install resolved     scripts:
+236 silly install resolved      { test: 'node ./bin/cake test',
+236 silly install resolved        'test-harmony': 'node --harmony ./bin/cake test' },
+236 silly install resolved     homepage: 'http://coffeescript.org',
+236 silly install resolved     bugs: { url: 'https://github.com/jashkenas/coffeescript/issues' },
+236 silly install resolved     repository:
+236 silly install resolved      { type: 'git',
+236 silly install resolved        url: 'git://github.com/jashkenas/coffeescript.git' },
+236 silly install resolved     devDependencies:
+236 silly install resolved      { 'uglify-js': '~2.2',
+236 silly install resolved        jison: '>=0.2.0',
+236 silly install resolved        'highlight.js': '~8.0.0',
+236 silly install resolved        underscore: '~1.5.2',
+236 silly install resolved        docco: '~0.7.0' },
+236 silly install resolved     gitHead: '533ad8afe920b2dbf64ffb00efda45648242cc24',
+236 silly install resolved     _id: 'coffee-script@1.9.1',
+236 silly install resolved     _shasum: 'c458d02200f460d064a79cb6ab1ee6e2c9ca1c31',
+236 silly install resolved     _from: 'coffee-script@1.9.1',
+236 silly install resolved     _npmVersion: '1.4.28',
+236 silly install resolved     _npmUser: { name: 'jashkenas', email: 'jashkenas@gmail.com' },
+236 silly install resolved     maintainers: [ [Object], [Object] ],
+236 silly install resolved     dist:
+236 silly install resolved      { shasum: 'c458d02200f460d064a79cb6ab1ee6e2c9ca1c31',
+236 silly install resolved        tarball: 'http://registry.npmjs.org/coffee-script/-/coffee-script-1.9.1.tgz' },
+236 silly install resolved     _resolved: 'https://registry.npmjs.org/coffee-script/-/coffee-script-1.9.1.tgz',
+236 silly install resolved     readme: 'ERROR: No README data found!' },
+236 silly install resolved   { name: 'repl',
+236 silly install resolved     author: { name: 'Firejune', url: 'http://firejune.com/' },
+236 silly install resolved     version: '0.1.3',
+236 silly install resolved     description: 'A simple fast template libray.',
+236 silly install resolved     homepage: 'http://github.com/firejune/repl',
+236 silly install resolved     keywords: [ 'template', 'engine', 'repl' ],
+236 silly install resolved     main: 'lib/template',
+236 silly install resolved     directories: { lib: 'lib' },
+236 silly install resolved     repository: { type: 'git', url: 'git://github.com/firejune/repl.git' },
+236 silly install resolved     licenses: [ [Object] ],
+236 silly install resolved     bugs: { url: 'http://github.com/firejune/repl/issues' },
+236 silly install resolved     engines: { node: '>= 0.4.0' },
+236 silly install resolved     _npmUser: { name: 'firejune', email: 'to@firejune.com' },
+236 silly install resolved     _id: 'repl@0.1.3',
+236 silly install resolved     dependencies: {},
+236 silly install resolved     devDependencies: {},
+236 silly install resolved     _engineSupported: true,
+236 silly install resolved     _npmVersion: '1.0.94',
+236 silly install resolved     _nodeVersion: 'v0.4.12',
+236 silly install resolved     _defaultsLoaded: true,
+236 silly install resolved     dist:
+236 silly install resolved      { shasum: '2f05d42b0c88b43d05ccbda10ed14aeff5699b60',
+236 silly install resolved        tarball: 'http://registry.npmjs.org/repl/-/repl-0.1.3.tgz' },
+236 silly install resolved     maintainers: [ [Object] ],
+236 silly install resolved     _shasum: '2f05d42b0c88b43d05ccbda10ed14aeff5699b60',
+236 silly install resolved     _resolved: 'https://registry.npmjs.org/repl/-/repl-0.1.3.tgz',
+236 silly install resolved     _from: 'repl@0.1.3',
+236 silly install resolved     readme: 'ERROR: No README data found!' } ]
+237 info install bindings@1.2.1 into C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c
+238 info install underscore@1.8.2 into C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c
+239 info install coffee-script@1.9.1 into C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c
+240 info install repl@0.1.3 into C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c
+241 info installOne bindings@1.2.1
+242 verbose installOne of bindings to C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c not in flight; installing
+243 info installOne underscore@1.8.2
+244 verbose installOne of underscore to C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c not in flight; installing
+245 info installOne coffee-script@1.9.1
+246 verbose installOne of coffee-script to C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c not in flight; installing
+247 info installOne repl@0.1.3
+248 verbose installOne of repl to C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c not in flight; installing
+249 verbose lock using C:\Users\grinv\AppData\Roaming\npm-cache\_locks\bindings-5bf5cc4c5bcfc275.lock for C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\bindings
+250 silly install write writing bindings 1.2.1 to C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\bindings
+251 verbose lock using C:\Users\grinv\AppData\Roaming\npm-cache\_locks\underscore-bf7e3ba55144308f.lock for C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\underscore
+252 silly install write writing underscore 1.8.2 to C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\underscore
+253 verbose lock using C:\Users\grinv\AppData\Roaming\npm-cache\_locks\repl-97669609450153e2.lock for C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\repl
+254 verbose lock using C:\Users\grinv\AppData\Roaming\npm-cache\_locks\coffee-script-9e80533e41d9fba3.lock for C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\coffee-script
+255 silly install write writing repl 0.1.3 to C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\repl
+256 silly install write writing coffee-script 1.9.1 to C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\coffee-script
+257 verbose unbuild node_modules\htu21d-i2c\node_modules\i2c\node_modules\bindings
+258 verbose unbuild node_modules\htu21d-i2c\node_modules\i2c\node_modules\underscore
+259 silly gentlyRm C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\bindings is being purged from base C:\dev\autoTerrarium
+260 verbose gentlyRm don't care about contents; nuking C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\bindings
+261 verbose unbuild node_modules\htu21d-i2c\node_modules\i2c\node_modules\repl
+262 verbose tar unpack C:\Users\grinv\AppData\Roaming\npm-cache\bindings\1.2.1\package.tgz
+263 verbose tar unpacking to C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\bindings
+264 silly gentlyRm C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\bindings is being purged
+265 verbose gentlyRm don't care about contents; nuking C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\bindings
+266 silly gentlyRm C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\underscore is being purged from base C:\dev\autoTerrarium
+267 verbose gentlyRm don't care about contents; nuking C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\underscore
+268 silly gunzTarPerm modes [ '777', '666' ]
+269 verbose tar unpack C:\Users\grinv\AppData\Roaming\npm-cache\underscore\1.8.2\package.tgz
+270 verbose tar unpacking to C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\underscore
+271 silly gentlyRm C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\underscore is being purged
+272 verbose gentlyRm don't care about contents; nuking C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\underscore
+273 verbose unbuild node_modules\htu21d-i2c\node_modules\i2c\node_modules\coffee-script
+274 silly gentlyRm C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\repl is being purged from base C:\dev\autoTerrarium
+275 verbose gentlyRm don't care about contents; nuking C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\repl
+276 silly gunzTarPerm modes [ '777', '666' ]
+277 verbose tar unpack C:\Users\grinv\AppData\Roaming\npm-cache\repl\0.1.3\package.tgz
+278 verbose tar unpacking to C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\repl
+279 silly gentlyRm C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\repl is being purged
+280 verbose gentlyRm don't care about contents; nuking C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\repl
+281 silly gentlyRm C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\coffee-script is being purged from base C:\dev\autoTerrarium
+282 verbose gentlyRm don't care about contents; nuking C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\coffee-script
+283 silly gunzTarPerm modes [ '777', '666' ]
+284 verbose tar unpack C:\Users\grinv\AppData\Roaming\npm-cache\coffee-script\1.9.1\package.tgz
+285 verbose tar unpacking to C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\coffee-script
+286 silly gentlyRm C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\coffee-script is being purged
+287 verbose gentlyRm don't care about contents; nuking C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\coffee-script
+288 silly gunzTarPerm modes [ '777', '666' ]
+289 silly gunzTarPerm extractEntry package.json
+290 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+291 silly gunzTarPerm extractEntry package.json
+292 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+293 silly gunzTarPerm extractEntry test.js
+294 silly gunzTarPerm modified mode [ 'test.js', 420, 438 ]
+295 silly gunzTarPerm extractEntry README.md
+296 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+297 silly gunzTarPerm extractEntry bindings.js
+298 silly gunzTarPerm modified mode [ 'bindings.js', 420, 438 ]
+299 silly gunzTarPerm extractEntry package.json
+300 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+301 silly gunzTarPerm extractEntry README.md
+302 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+303 silly gunzTarPerm extractEntry LICENSE
+304 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+305 silly gunzTarPerm extractEntry README.md
+306 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+307 silly gunzTarPerm extractEntry package.json
+308 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+309 silly gunzTarPerm extractEntry .npmignore
+310 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+311 silly gunzTarPerm extractEntry README
+312 silly gunzTarPerm modified mode [ 'README', 420, 438 ]
+313 silly gunzTarPerm extractEntry README.md
+314 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+315 silly gunzTarPerm extractEntry index.js
+316 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+317 silly gunzTarPerm extractEntry lib/repl.js
+318 silly gunzTarPerm modified mode [ 'lib/repl.js', 420, 438 ]
+319 silly gunzTarPerm extractEntry LICENSE
+320 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+321 silly gunzTarPerm extractEntry underscore.js
+322 silly gunzTarPerm modified mode [ 'underscore.js', 420, 438 ]
+323 silly gunzTarPerm extractEntry underscore-min.js
+324 silly gunzTarPerm modified mode [ 'underscore-min.js', 420, 438 ]
+325 silly gunzTarPerm extractEntry underscore-min.map
+326 silly gunzTarPerm modified mode [ 'underscore-min.map', 420, 438 ]
+327 silly gunzTarPerm extractEntry register.js
+328 silly gunzTarPerm modified mode [ 'register.js', 420, 438 ]
+329 silly gunzTarPerm extractEntry repl.js
+330 silly gunzTarPerm modified mode [ 'repl.js', 420, 438 ]
+331 silly gunzTarPerm extractEntry bin/cake
+332 silly gunzTarPerm modified mode [ 'bin/cake', 493, 511 ]
+333 silly gunzTarPerm extractEntry bin/coffee
+334 silly gunzTarPerm modified mode [ 'bin/coffee', 493, 511 ]
+335 verbose write writing to C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\bindings\package.json
+336 silly gunzTarPerm extractEntry bower.json
+337 silly gunzTarPerm modified mode [ 'bower.json', 420, 438 ]
+338 silly gunzTarPerm extractEntry lib/coffee-script/browser.js
+339 silly gunzTarPerm modified mode [ 'lib/coffee-script/browser.js', 420, 438 ]
+340 info preinstall bindings@1.2.1
+341 verbose readDependencies loading dependencies from C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\bindings\package.json
+342 verbose write writing to C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\repl\package.json
+343 silly gunzTarPerm extractEntry lib/coffee-script/grammar.js
+344 silly gunzTarPerm modified mode [ 'lib/coffee-script/grammar.js', 420, 438 ]
+345 silly gunzTarPerm extractEntry lib/coffee-script/helpers.js
+346 silly gunzTarPerm modified mode [ 'lib/coffee-script/helpers.js', 420, 438 ]
+347 verbose readDependencies loading dependencies from C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\bindings\package.json
+348 info preinstall repl@0.1.3
+349 silly install resolved []
+350 verbose about to build C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\bindings
+351 info build C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\bindings
+352 verbose readDependencies loading dependencies from C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\repl\package.json
+353 silly gunzTarPerm extractEntry lib/coffee-script/index.js
+354 silly gunzTarPerm modified mode [ 'lib/coffee-script/index.js', 420, 438 ]
+355 silly gunzTarPerm extractEntry lib/coffee-script/lexer.js
+356 silly gunzTarPerm modified mode [ 'lib/coffee-script/lexer.js', 420, 438 ]
+357 info linkStuff bindings@1.2.1
+358 silly linkStuff bindings@1.2.1 has C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules as its parent node_modules
+359 verbose readDependencies loading dependencies from C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\repl\package.json
+360 silly gunzTarPerm extractEntry lib/coffee-script/command.js
+361 silly gunzTarPerm modified mode [ 'lib/coffee-script/command.js', 420, 438 ]
+362 silly gunzTarPerm extractEntry lib/coffee-script/optparse.js
+363 silly gunzTarPerm modified mode [ 'lib/coffee-script/optparse.js', 420, 438 ]
+364 silly install resolved []
+365 verbose about to build C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\repl
+366 info build C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\repl
+367 verbose linkBins bindings@1.2.1
+368 verbose linkMans bindings@1.2.1
+369 verbose rebuildBundles bindings@1.2.1
+370 info install bindings@1.2.1
+371 info linkStuff repl@0.1.3
+372 silly linkStuff repl@0.1.3 has C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules as its parent node_modules
+373 info postinstall bindings@1.2.1
+374 verbose unlock done using C:\Users\grinv\AppData\Roaming\npm-cache\_locks\bindings-5bf5cc4c5bcfc275.lock for C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\bindings
+375 silly gunzTarPerm extractEntry lib/coffee-script/parser.js
+376 silly gunzTarPerm modified mode [ 'lib/coffee-script/parser.js', 493, 511 ]
+377 silly gunzTarPerm extractEntry lib/coffee-script/register.js
+378 silly gunzTarPerm modified mode [ 'lib/coffee-script/register.js', 420, 438 ]
+379 verbose linkBins repl@0.1.3
+380 verbose linkMans repl@0.1.3
+381 verbose rebuildBundles repl@0.1.3
+382 info install repl@0.1.3
+383 info postinstall repl@0.1.3
+384 silly gunzTarPerm extractEntry lib/coffee-script/repl.js
+385 silly gunzTarPerm modified mode [ 'lib/coffee-script/repl.js', 420, 438 ]
+386 silly gunzTarPerm extractEntry lib/coffee-script/rewriter.js
+387 silly gunzTarPerm modified mode [ 'lib/coffee-script/rewriter.js', 420, 438 ]
+388 verbose unlock done using C:\Users\grinv\AppData\Roaming\npm-cache\_locks\repl-97669609450153e2.lock for C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\repl
+389 silly gunzTarPerm extractEntry lib/coffee-script/coffee-script.js
+390 silly gunzTarPerm modified mode [ 'lib/coffee-script/coffee-script.js', 420, 438 ]
+391 silly gunzTarPerm extractEntry lib/coffee-script/scope.js
+392 silly gunzTarPerm modified mode [ 'lib/coffee-script/scope.js', 420, 438 ]
+393 silly gunzTarPerm extractEntry lib/coffee-script/cake.js
+394 silly gunzTarPerm modified mode [ 'lib/coffee-script/cake.js', 420, 438 ]
+395 silly gunzTarPerm extractEntry lib/coffee-script/sourcemap.js
+396 silly gunzTarPerm modified mode [ 'lib/coffee-script/sourcemap.js', 420, 438 ]
+397 silly gunzTarPerm extractEntry lib/coffee-script/nodes.js
+398 silly gunzTarPerm modified mode [ 'lib/coffee-script/nodes.js', 420, 438 ]
+399 silly gunzTarPerm extractEntry CNAME
+400 silly gunzTarPerm modified mode [ 'CNAME', 420, 438 ]
+401 silly gunzTarPerm extractEntry CONTRIBUTING.md
+402 silly gunzTarPerm modified mode [ 'CONTRIBUTING.md', 420, 438 ]
+403 verbose write writing to C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\underscore\package.json
+404 info preinstall underscore@1.8.2
+405 verbose readDependencies loading dependencies from C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\underscore\package.json
+406 verbose readDependencies loading dependencies from C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\underscore\package.json
+407 silly install resolved []
+408 verbose about to build C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\underscore
+409 info build C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\underscore
+410 info linkStuff underscore@1.8.2
+411 silly linkStuff underscore@1.8.2 has C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules as its parent node_modules
+412 verbose linkBins underscore@1.8.2
+413 verbose linkMans underscore@1.8.2
+414 verbose rebuildBundles underscore@1.8.2
+415 info install underscore@1.8.2
+416 info postinstall underscore@1.8.2
+417 verbose unlock done using C:\Users\grinv\AppData\Roaming\npm-cache\_locks\underscore-bf7e3ba55144308f.lock for C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\underscore
+418 verbose write writing to C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\coffee-script\package.json
+419 info preinstall coffee-script@1.9.1
+420 verbose readDependencies loading dependencies from C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\coffee-script\package.json
+421 verbose readDependencies loading dependencies from C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\coffee-script\package.json
+422 silly install resolved []
+423 verbose about to build C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\coffee-script
+424 info build C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\coffee-script
+425 info linkStuff coffee-script@1.9.1
+426 silly linkStuff coffee-script@1.9.1 has C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules as its parent node_modules
+427 verbose linkBins coffee-script@1.9.1
+428 verbose link bins [ { coffee: './bin/coffee', cake: './bin/cake' },
+428 verbose link bins   'C:\\dev\\autoTerrarium\\node_modules\\htu21d-i2c\\node_modules\\i2c\\node_modules\\.bin',
+428 verbose link bins   false ]
+429 verbose linkMans coffee-script@1.9.1
+430 verbose rebuildBundles coffee-script@1.9.1
+431 info install coffee-script@1.9.1
+432 info postinstall coffee-script@1.9.1
+433 verbose unlock done using C:\Users\grinv\AppData\Roaming\npm-cache\_locks\coffee-script-9e80533e41d9fba3.lock for C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c\node_modules\coffee-script
+434 verbose about to build C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c
+435 info build C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c
+436 info linkStuff i2c@0.2.1
+437 silly linkStuff i2c@0.2.1 has C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules as its parent node_modules
+438 verbose linkBins i2c@0.2.1
+439 verbose linkMans i2c@0.2.1
+440 verbose rebuildBundles i2c@0.2.1
+441 verbose rebuildBundles [ '.bin', 'bindings', 'coffee-script', 'repl', 'underscore' ]
+442 info install i2c@0.2.1
+443 verbose unsafe-perm in lifecycle true
+444 info i2c@0.2.1 Failed to exec install script
+445 verbose unlock done using C:\Users\grinv\AppData\Roaming\npm-cache\_locks\i2c-6b1d7fcc9487e666.lock for C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c
+446 verbose about to build C:\dev\autoTerrarium\node_modules\htu21d-i2c
+447 verbose unlock done using C:\Users\grinv\AppData\Roaming\npm-cache\_locks\htu21d-i2c-f83c7a6c8781d687.lock for C:\dev\autoTerrarium\node_modules\htu21d-i2c
+448 verbose stack Error: i2c@0.2.1 install: `node-gyp rebuild`
+448 verbose stack Exit status 1
+448 verbose stack     at EventEmitter.<anonymous> (C:\Users\grinv\AppData\Roaming\nvm\v0.12.7\node_modules\npm\lib\utils\lifecycle.js:213:16)
+448 verbose stack     at EventEmitter.emit (events.js:110:17)
+448 verbose stack     at ChildProcess.<anonymous> (C:\Users\grinv\AppData\Roaming\nvm\v0.12.7\node_modules\npm\lib\utils\spawn.js:24:14)
+448 verbose stack     at ChildProcess.emit (events.js:110:17)
+448 verbose stack     at maybeClose (child_process.js:1015:16)
+448 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+449 verbose pkgid i2c@0.2.1
+450 verbose cwd C:\dev\autoTerrarium
+451 error Windows_NT 6.3.9600
+452 error argv "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "htu21d-i2c"
+453 error node v0.12.7
+454 error npm  v2.11.3
+455 error code ELIFECYCLE
+456 error i2c@0.2.1 install: `node-gyp rebuild`
+456 error Exit status 1
+457 error Failed at the i2c@0.2.1 install script 'node-gyp rebuild'.
+457 error This is most likely a problem with the i2c package,
+457 error not with npm itself.
+457 error Tell the author that this fails on your system:
+457 error     node-gyp rebuild
+457 error You can get their info via:
+457 error     npm owner ls i2c
+457 error There is likely additional logging output above.
+458 verbose exit [ 1, true ]
+459 verbose unbuild node_modules\htu21d-i2c\node_modules\i2c
+460 info preuninstall i2c@0.2.1
+461 info uninstall i2c@0.2.1
+462 verbose unbuild rmStuff i2c@0.2.1 from C:\dev\autoTerrarium\node_modules
+463 verbose unbuild rmStuff in C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules
+464 info postuninstall i2c@0.2.1
+465 silly gentlyRm C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c is being purged from base C:\dev\autoTerrarium
+466 verbose gentlyRm don't care about contents; nuking C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c
+467 silly vacuum-fs purging C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules\i2c
+468 silly vacuum-fs removing C:\dev\autoTerrarium\node_modules\htu21d-i2c\node_modules
+469 silly vacuum-fs quitting because other entries in C:\dev\autoTerrarium\node_modules\htu21d-i2c
+470 verbose unbuild node_modules\htu21d-i2c
+471 info preuninstall htu21d-i2c@0.1.0
+472 info uninstall htu21d-i2c@0.1.0
+473 verbose unbuild rmStuff htu21d-i2c@0.1.0 from C:\dev\autoTerrarium\node_modules
+474 info postuninstall htu21d-i2c@0.1.0
+475 silly gentlyRm C:\dev\autoTerrarium\node_modules\htu21d-i2c is being purged from base C:\dev\autoTerrarium
+476 verbose gentlyRm don't care about contents; nuking C:\dev\autoTerrarium\node_modules\htu21d-i2c
+477 silly vacuum-fs purging C:\dev\autoTerrarium\node_modules\htu21d-i2c
+478 silly vacuum-fs quitting because other entries in C:\dev\autoTerrarium\node_modules
