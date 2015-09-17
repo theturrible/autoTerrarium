@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var i2c_htu21d = require('htu21d-i2c');
-var async = require('async')
 // If using a Raspberry Pi, do not specify the i2c device name.
 // The correct name will be used based on the board revision.
 // Older boards use /dev/i2c-0, newer ones use /dev/i2c-1.
