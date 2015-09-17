@@ -29,3 +29,6 @@ Gets:
 
 
 #### Note: Does not build on 4.0.0 due to i2c lib support
+
+##### TODO: 
+* remove unneeded jade/css/boilerplate code
