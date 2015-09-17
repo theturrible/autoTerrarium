@@ -48,6 +48,17 @@ router.get('/t', function(req, res) {
           res.json({ temperature: temp});   
       });
 });
+router.get('/conditions', function(req, res) {
+  var locals [];
+      sensor.readTemperature(function (temp) {
+        locals.push(temp);
+        sensor.readHumidity(function (humidity){
+              res.json({ humidity: humidity, temperature: locals[0]});   
+          });
+      });
+});
+
+
 
 
 app.use('/api', router);
