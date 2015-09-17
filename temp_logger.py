@@ -1,40 +1,98 @@
-# Raspberry Pi Temperature Logger
-# Zagros Robotics, Inc.
-# www.zagrosrobotics.com
-# 6/25/2013
 
-import smbus
-import time
-import datetime
+#!/usr/bin/python
+import struct, array, time, io, fcntl
 
+I2C_SLAVE=0x0703
+HTU21D_ADDR = 0x40
+CMD_READ_TEMP_HOLD = "\xE3"
+CMD_READ_HUM_HOLD = "\xE5"
+CMD_READ_TEMP_NOHOLD = "\xF3"
+CMD_READ_HUM_NOHOLD = "\xF5"
+CMD_WRITE_USER_REG = "\xE6"
+CMD_READ_USER_REG = "\xE7"
+CMD_SOFT_RESET= "\xFE"
 
-bus = smbus.SMBus(1)
+class i2c(object):
+   def __init__(self, device, bus):
 
-#I2C address of sensor
-address = 0x39
+      self.fr = io.open("/dev/i2c-"+str(bus), "rb", buffering=0)
+      self.fw = io.open("/dev/i2c-"+str(bus), "wb", buffering=0)
 
-def temperature():
-    rvalue0 = bus.read_word_data(address,0)
-    rvalue1 = (rvalue0 & 0xff00) >> 8
-    rvalue2 = rvalue0 & 0x00ff
-    rvalue = (((rvalue2 * 256) + rvalue1) >> 4 ) *.0625
-    #print rvalue1, rvalue2
-    return rvalue
+      # set device address
 
-print("Temperature Data Logger\n")
+      fcntl.ioctl(self.fr, I2C_SLAVE, device)
+      fcntl.ioctl(self.fw, I2C_SLAVE, device)
 
-while True:
-    
-    #Open Log File
-    f=open('tempdata.txt','a')
-    now = datetime.datetime.now()
-    timestamp = now.strftime("%Y/%m/%d %H:%M")
-    outvalue = temperature()
-    outstring = str(timestamp)+"  "+str(outvalue)+" C "+str(outvalue*1.8+32)+" F"+"\n"
-    print outstring
-    f.write(outstring)
-    f.close()
+   def write(self, bytes):
+      self.fw.write(bytes)
 
-    #log temperature every 60 seconds
-    time.sleep(60)
-    
+   def read(self, bytes):
+      return self.fr.read(bytes)
+
+   def close(self):
+      self.fw.close()
+      self.fr.close()
+
+class HTU21D(object):
+   def __init__(self):
+      self.dev = i2c(HTU21D_ADDR, 1) #HTU21D 0x40, bus 1
+      self.dev.write(CMD_SOFT_RESET) #soft reset
+      time.sleep(.1)
+
+   def ctemp(self, sensorTemp):
+      tSensorTemp = sensorTemp / 65536.0
+      return -46.85 + (175.72 * tSensorTemp)
+
+   def chumid(self, sensorHumid):
+      tSensorHumid = sensorHumid / 65536.0
+      return -6.0 + (125.0 * tSensorHumid)
+
+   def crc8check(self, value):
+      # Ported from Sparkfun Arduino HTU21D Library: https://github.com/sparkfun/HTU21D_Breakout
+      remainder = ( ( value[0] << 8 ) + value[1] ) << 8
+      remainder |= value[2]
+      
+      # POLYNOMIAL = 0x0131 = x^8 + x^5 + x^4 + 1
+      # divsor = 0x988000 is the 0x0131 polynomial shifted to farthest left of three bytes
+      divsor = 0x988000
+      
+      for i in range(0, 16):
+         if( remainder & 1 << (23 - i) ):
+            remainder ^= divsor
+         divsor = divsor >> 1
+      
+      if remainder == 0:
+         return True
+      else:
+         return False
+   
+   def read_tmperature(self):
+      self.dev.write(CMD_READ_TEMP_NOHOLD) #measure temp
+      time.sleep(.1)
+
+      data = self.dev.read(3)
+      buf = array.array('B', data)
+
+      if self.crc8check(buf):
+         temp = (buf[0] << 8 | buf [1]) & 0xFFFC
+         return self.ctemp(temp)
+      else:
+         return -255
+         
+   def read_humidity(self):
+      self.dev.write(CMD_READ_HUM_NOHOLD) #measure humidity
+      time.sleep(.1)
+
+      data = self.dev.read(3)
+      buf = array.array('B', data)
+      
+      if self.crc8check(buf):
+         humid = (buf[0] << 8 | buf [1]) & 0xFFFC
+         return self.chumid(humid)
+      else:
+         return -255
+         
+if __name__ == "__main__":
+   obj = HTU21D()
+   print "Temp:", obj.read_tmperature(), "C"
+   print "Humid:", obj.read_humidity(), "% rH"
